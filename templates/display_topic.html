@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_topic</title>
+</head>
+<body>
+    <center>
+        <h4>display_topic</h4>
+    </center>
+    <table border="2px">
+        <tr>
+            <th>
+                topic_name
+            </th>
+        </tr>
+        {% for x in topics %}
+        <tr>
+            <td>
+                {{x.topic_name}}
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>    
+    <button><a href="{% url 'display_webpage' %}"> display web table</a></button>
+</body>
+</html>

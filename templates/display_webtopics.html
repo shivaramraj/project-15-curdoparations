@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_webtopics</title>
+</head>
+<body>
+    <center>shiva</center>
+    <table border="2px" >
+        <tr>
+            <th>name</th>
+            <th>auther</th>
+            <th>date</th>
+        </tr>
+        {% for ao in webtopics %}
+        <tr>
+            <td>{{ao.topic_name}}</td>
+            <td>{{ao.p_name}}</td>
+            <td>{{ao.p_url}}</td>
+        </tr>
+            
+        {% endfor %}
+    </table>
+    <button><a href="{% url 'display_topic' %}" target="self"> display topic table</a></button>
+</body>
+</html>
